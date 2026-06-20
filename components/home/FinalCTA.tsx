@@ -13,13 +13,13 @@ export function FinalCTA() {
           <div className="pointer-events-none absolute inset-x-0 bottom-[-40%] mx-auto h-[300px] w-[300px] rounded-full bg-dawn-gradient opacity-20 blur-[100px]" />
 
           <h2 className="relative font-display text-2xl font-black leading-snug text-slate-50 sm:text-4xl">
-            あなたのアイデアを、
+            まずは、ひとつ。
             <br />
-            <span className="text-shimmer">世界に置こう。</span>
+            <span className="text-shimmer">作ってみませんか。</span>
           </h2>
           <p className="relative mx-auto mt-5 max-w-md text-sm leading-relaxed text-slate-300 sm:text-base">
             まだ何を作るか決まっていなくても大丈夫。
-            4つの質問に答えるだけで、あなただけの「3か月後」と「1年後」が見えてきます。
+            4つの質問に答えるだけで、あなたに向いていそうなものが見えてきます。
           </p>
           <div className="relative mt-8 flex justify-center">
             <CTAButton href="/diagnose">

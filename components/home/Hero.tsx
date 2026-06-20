@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
 
-// トップのヒーロー。最初の3秒で「胸が少し熱くなる」ことを狙う。
+// トップのヒーロー。あおらず、静かに「自分にもできるかも」と思ってもらう。
 export function Hero() {
   return (
     <section className="relative overflow-hidden px-5 pb-20 pt-20 sm:px-8 sm:pt-28">
@@ -32,9 +32,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-display text-4xl font-black leading-[1.15] tracking-tight text-slate-50 sm:text-6xl"
         >
-          受け手で、
-          <br className="sm:hidden" />
-          終わらない。
+          見ているだけだった人が、
           <br />
           <span className="text-shimmer">つくる側</span>へ。
         </motion.h1>
@@ -46,12 +44,12 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg"
         >
-          昔は、世界を変えるのに
-          <span className="text-slate-100">資金・人脈・組織</span>が必要だった。
+          少し前まで、何かを作るには
+          <span className="text-slate-100">専門知識やお金</span>がいった。
           <br className="hidden sm:block" />
-          今は、<span className="text-gradient font-bold">アイデアとAI</span>があればいい。
+          今は、<span className="text-gradient font-bold">つくりたい気持ちとAI</span>があればいい。
           <br className="hidden sm:block" />
-          あなたの仕事も、趣味も、人生も。変えるものは、自分の手で作れる。
+          仕事のちょっとした不便も、趣味の「あったらいいな」も、自分の手で形にできる。
         </motion.p>
 
         {/* CTA */}

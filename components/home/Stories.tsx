@@ -71,9 +71,9 @@ export function Stories() {
 
         <Reveal delay={0.1}>
           <p className="mt-10 text-center text-sm text-slate-400">
-            次にここへ名前を連ねるのは、
-            <span className="text-gradient font-bold">あなた</span>
-            かもしれません。
+            あなたの「ちょっと困った」も、
+            <span className="text-gradient font-bold">きっと、何かの入口</span>
+            になります。
           </p>
         </Reveal>
       </div>
