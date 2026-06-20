@@ -9,7 +9,8 @@ export function Navbar() {
 
   const links = [
     { href: "/diagnose", label: "未来診断" },
-    { href: "/zukan", label: "作れるもの図鑑" },
+    { href: "/zukan", label: "図鑑" },
+    { href: "/start", label: "はじめかた" },
   ];
 
   return (
