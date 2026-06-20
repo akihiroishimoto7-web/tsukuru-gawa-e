@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="14" y1="50" x2="50" y2="14" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1" />
+      <stop offset="0.5" stop-color="#a855f7" />
+      <stop offset="1" stop-color="#ff8a5c" />
+    </linearGradient>
+  </defs>
+  <!-- 濃紺の角丸ベース -->
+  <rect width="64" height="64" rx="16" fill="#070a18" />
+  <!-- 上へ伸びる山＝のぼる・つくる -->
+  <path d="M18 42 L32 22 L46 42" fill="none" stroke="url(#g)" stroke-width="6"
+    stroke-linecap="round" stroke-linejoin="round" />
+  <!-- 夜明けの光の点 -->
+  <circle cx="32" cy="47" r="4" fill="url(#g)" />
+</svg>

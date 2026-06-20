@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-slate-200 antialiased;
+  /* 濃紺のベースに、夜明けの光が上からほのかに差し込む */
+  background-image:
+    radial-gradient(70% 50% at 50% -10%, rgba(99, 102, 241, 0.18), transparent 70%),
+    radial-gradient(50% 40% at 85% 8%, rgba(255, 138, 92, 0.10), transparent 70%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* ===== 再利用するユーティリティ ===== */
+@layer components {
+  /* グラデーションで光る見出しテキスト */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #c7d2fe 0%, #e9d5ff 35%, #ffb088 100%);
+  }
+
+  /* 流れるグラデーション（CTAなどの強調） */
+  .text-shimmer {
+    @apply bg-clip-text text-transparent animate-shimmer;
+    background-image: linear-gradient(
+      110deg,
+      #818cf8 0%,
+      #c084fc 25%,
+      #ff8a5c 50%,
+      #c084fc 75%,
+      #818cf8 100%
+    );
+    background-size: 200% auto;
+  }
+
+  /* カードの基本スタイル：すりガラス + 細い境界線 */
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm;
+  }
+
+  /* やわらかな内側の境界線を持つカードの装飾 */
+  .card-glow {
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+      0 20px 60px -30px rgba(99, 102, 241, 0.35);
+  }
+}
+
+@layer utilities {
+  /* スクロールバーを控えめに（静かな雰囲気のため） */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* セクション間の標準余白 */
+  .section-pad {
+    @apply px-5 py-20 sm:px-8 md:py-28;
+  }
+}
+
+/* prefers-reduced-motion に配慮：動きを抑える */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
