@@ -70,6 +70,7 @@ export interface ZukanItem {
   difficulty: 1 | 2 | 3 | 4 | 5; // 難易度（★の数）
   skills: string[]; // 必要スキル
   mvp: string; // 最初に作るMVP
+  steps: string[]; // つくり方の最初の3ステップ（AIに伝える→小さく作る→自分用に直して公開）
   emoji: string;
 }
 
