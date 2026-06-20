@@ -2,10 +2,19 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { categories } from "@/lib/zukan-data";
+import { zukanItems } from "@/lib/zukan-data";
+import { ZukanCard } from "@/components/zukan/ZukanCard";
 
-// トップで「作れるもの」のカテゴリをちらっと見せ、図鑑へ誘導する。
+// トップで実際の「作れるもの」を数点そのまま見せ、図鑑へ最短でつなぐ。
+// カテゴリの抽象でワンクッション置かず、具体的なカードを直接届ける。
+// 各カテゴリから1つずつ、はじめやすい(難易度低め)題材を選んでいる。
+const featuredIds = ["off-1", "edu-1", "hob-1", "med-2", "media-3", "ai-3"];
+
 export function ZukanPreview() {
+  const featured = featuredIds
+    .map((id) => zukanItems.find((item) => item.id === id))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item));
+
   return (
     <section className="section-pad">
       <div className="mx-auto max-w-5xl">
@@ -14,7 +23,7 @@ export function ZukanPreview() {
             作れるもの図鑑
           </p>
           <h2 className="mt-3 text-center font-display text-2xl font-bold text-slate-100 sm:text-3xl">
-            あなたの世界でも、これが作れる。
+            たとえば、こんなものが作れる。
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-slate-400">
             どれも、特別な人の話ではありません。
@@ -22,27 +31,24 @@ export function ZukanPreview() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-          {categories.map((cat, i) => (
-            <Reveal key={cat.id} delay={i * 0.05}>
-              <Link
-                href={`/zukan?cat=${cat.id}`}
-                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
-              >
-                <span className="text-2xl">{cat.emoji}</span>
-                <span className="mt-3 font-display text-sm font-bold text-slate-100 sm:text-base">
-                  {cat.label}
-                </span>
-                <span className="mt-1 text-xs leading-relaxed text-slate-400">
-                  {cat.blurb}
-                </span>
-                <span className="mt-3 text-xs font-medium text-ember opacity-0 transition-opacity group-hover:opacity-100">
-                  見てみる →
-                </span>
-              </Link>
-            </Reveal>
+        {/* カテゴリではなく、実物のカードを直接見せる */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((item, i) => (
+            <ZukanCard key={item.id} item={item} index={i} />
           ))}
         </div>
+
+        <Reveal delay={0.1}>
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/zukan"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-slate-100 transition-all hover:border-white/30 hover:bg-white/[0.07]"
+            >
+              図鑑をすべて見る（全{zukanItems.length}種）
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
