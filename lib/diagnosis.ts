@@ -6,9 +6,9 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
   practical: {
     id: "practical",
     name: "実務改善型クリエイター",
-    catchphrase: "あなたの『面倒くさい』は、誰かを救う発明になる。",
+    catchphrase: "あなたの『面倒くさい』が、誰かの仕事を軽くする。",
     description:
-      "毎日の現場で、小さな非効率に気づいてしまうあなた。その違和感こそが宝です。AIを使えば、職場の『誰かがやらなきゃ』を、あなたの手で静かに解決できます。派手じゃなくていい。現場が少し軽くなる——それが一番むずかしくて、一番尊い仕事です。",
+      "毎日の現場で、小さな非効率に気づいてしまうあなた。その違和感こそが宝です。AIを使えば、職場の『誰かがやらなきゃ』を、あなたの手で静かに解決できます。派手じゃなくていい。現場が少し軽くなる——簡単ではないけれど、確かに意味のある仕事です。",
     inThreeMonths:
       "Excelに貼るだけで集計が終わるツール、入力ミスを自動で見つける仕組み、チームで使える小さなダッシュボード。『これ、自分で作ったの？』と驚かれるものが、もう手の中にあります。",
     inOneYear:
@@ -32,7 +32,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
   education: {
     id: "education",
     name: "教育変革型ビルダー",
-    catchphrase: "わかる喜びを、もっと多くの人へ手渡せる。",
+    catchphrase: "『わかった』の瞬間を、もっと多くの人に。",
     description:
       "誰かが『わかった！』と顔を上げる瞬間を、あなたは知っています。教える情熱とAIが出会うと、教材は紙を飛び出して、一人ひとりに寄り添うアプリになります。つまずく子に、何度でも、笑顔でやり直しを差し出せる先生を、あなたは作れる。",
     inThreeMonths:
@@ -58,7 +58,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
   media: {
     id: "media",
     name: "個人メディア型クリエイター",
-    catchphrase: "あなたの『好き』は、もう誰かが探している答え。",
+    catchphrase: "あなたの『好き』を、必要としている人がいる。",
     description:
       "好きなこと、続けてきたこと、伝えたいこと——それはコンテンツの原石です。AIを味方につければ、文章も、サイトも、便利な比較ツールも、一人で形にできる。発信は才能ではなく、続けられる仕組みを作れるかどうか。あなたはその仕組みを、作れる側にいます。",
     inThreeMonths:
@@ -84,7 +84,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
   founder: {
     id: "founder",
     name: "AI起業家型ビルダー",
-    catchphrase: "資金も組織もない。でも、アイデアとAIがある。",
+    catchphrase: "資金や組織がなくても、今日から作り始められる。",
     description:
       "『これ、世の中にあったら絶対いいのに』——その声が、あなたの中で消えない。かつて起業には資金・人脈・チームが要りました。今は違う。あなた一人とAIで、動くプロダクトを今夜から作り始められる。最初のユーザーは、明日にでも手に入ります。",
     inThreeMonths:
@@ -102,7 +102,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
     ],
     tools: ["Claude Code", "Codex", "VSCode", "GitHub", "Vercel", "Supabase", "Claude API"],
     encouragement:
-      "大きく始める必要はありません。今夜、1機能だけ動かす。その小さな一歩が、誰も止められないプロダクトの始まりです。",
+      "大きく始める必要はありません。今夜、1機能だけ動かす。その小さな一歩が、あなたのプロダクトの確かな始まりになります。",
     recommendedCategory: "ai",
     gradient: "from-amber-400 via-orange-500 to-rose-500",
   },
@@ -110,7 +110,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
   explorer: {
     id: "explorer",
     name: "探究型ビルダー",
-    catchphrase: "『何もない』は、何にでもなれるということ。",
+    catchphrase: "何もないところから、はじめればいい。",
     description:
       "まだ進む道は決まっていない。それは弱みではなく、最高の出発点です。AIは、初心者にこそ一番やさしい相棒。わからないことを何度聞いても、怒らず、笑わず、隣で一緒に作ってくれる。今日『なし』だった経験は、3か月後には『作ったことがある』に変わります。",
     inThreeMonths:
@@ -185,7 +185,7 @@ export const wantLabelMap: Record<string, string> = {
 export const timeEncouragementMap: Record<string, string> = {
   "1h": "週1時間。それでも、3か月あれば最初の作品は完成します。",
   "3h": "週3時間。続ければ、半年で『作れる人』に変わります。",
-  "5h": "週5時間以上。あなたの本気なら、世界はもっと早く動きます。",
+  "5h": "週5時間以上。それだけ向き合えるなら、進みはずっと早いはずです。",
 };
 
 // ===== 共有リンク用：回答 ⇄ 短い文字列 =====
