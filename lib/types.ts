@@ -43,6 +43,7 @@ export interface ResultType {
   description: string; // タイプ説明
   inThreeMonths: string; // 3か月後に作れるもの
   inOneYear: string; // 1年後に実現できる未来
+  inThreeYears: string; // 3年後に到達しうる景色（立志のスケール）
   roadmap: RoadmapDay[]; // 最初の7日間
   tools: string[]; // 必要ツール
   encouragement: string; // 励ましのメッセージ

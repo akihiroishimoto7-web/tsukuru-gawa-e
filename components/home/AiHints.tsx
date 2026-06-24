@@ -1,0 +1,88 @@
+"use client";
+
+import { Reveal } from "@/components/ui/Reveal";
+
+// AIの使い方のヒント。
+// 「アプリを作る」前に、まずAIに“頼むだけ”で手に入るものを見せる。
+// 高い専門サービスに頼んでいたことが、頼み方ひとつで今日手に入る——という体感。
+// どれも“作る時”にAIを使うだけ（Claude Codeの定額内）で、運用コストはかからない。
+const hints = [
+  {
+    emoji: "🧑‍💼",
+    ask: "自社の戦略を、超一流の経営コンサルタントとして整理して。",
+    gain: "コンサル級の戦略スライドのたたき台",
+  },
+  {
+    emoji: "🎓",
+    ask: "この内容で、一流の研修講師として研修スライドを作って。",
+    gain: "そのまま使える研修資料一式",
+  },
+  {
+    emoji: "📖",
+    ask: "子どもに読み聞かせる絵本を、挿絵の指示つきで作って。",
+    gain: "わが子のためのオリジナル絵本",
+  },
+  {
+    emoji: "📊",
+    ask: "この数字を、社長に響く1枚のスライドにまとめて。",
+    gain: "意思決定を動かすエグゼクティブ資料",
+  },
+  {
+    emoji: "📝",
+    ask: "この事業アイデアを、投資家の視点で厳しくレビューして。",
+    gain: "弱点が見えた事業計画",
+  },
+  {
+    emoji: "🗣️",
+    ask: "結婚式のスピーチを、このエピソードから感動的に書いて。",
+    gain: "心に残るスピーチ原稿",
+  },
+];
+
+export function AiHints() {
+  return (
+    <section className="section-pad">
+      <div className="mx-auto max-w-5xl">
+        <Reveal>
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-ember">
+            AIの使い方のヒント
+          </p>
+          <h2 className="mt-3 text-center font-display text-2xl font-bold text-slate-100 sm:text-3xl">
+            たとえば、AIにこう頼める。
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-slate-400">
+            これまで高い専門サービスに頼んでいたことが、頼み方ひとつで手に入る。
+            アプリを作る前に、まずはこんな一言から試せます。
+          </p>
+        </Reveal>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {hints.map((h, i) => (
+            <Reveal key={i} delay={(i % 3) * 0.06}>
+              <div className="glass-card card-glow flex h-full flex-col p-6">
+                <span className="text-2xl">{h.emoji}</span>
+                <p className="mt-3 flex-1 font-display text-base font-bold leading-relaxed text-slate-100">
+                  「{h.ask}」
+                </p>
+                <p className="mt-4 flex items-start gap-2 border-t border-white/5 pt-3 text-sm leading-relaxed text-ember">
+                  <span aria-hidden>→</span>
+                  <span className="text-gradient font-semibold">{h.gain}</span>
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={0.1}>
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-slate-400">
+            コツは、<span className="font-bold text-slate-200">役割を与えること</span>。
+            「超一流の◯◯として」と頼むだけで、返ってくるものの質が変わります。
+            <br className="hidden sm:block" />
+            しかも、作るのにかかるのはAIに頼む時間だけ。
+            <span className="text-slate-200">公開しても運用はほぼ¥0</span>です。
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

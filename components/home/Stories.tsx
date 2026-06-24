@@ -6,28 +6,28 @@ import { Reveal } from "@/components/ui/Reveal";
 // 特定個人の証言ではなく、各分野で実際に生まれている“代表的な姿”として描く。
 const stories = [
   {
-    emoji: "🗂️",
-    who: "事務職・30代",
-    made: "月末の集計を自動化するツール",
-    outcome: "「毎月の残業が、3時間からゼロになった」",
-  },
-  {
     emoji: "🩺",
     who: "介護の現場で働く人",
-    made: "家族向けの退院サポート説明アプリ",
-    outcome: "「不安そうな家族に、はじめて『よくわかった』と言われた」",
-  },
-  {
-    emoji: "🏃",
-    who: "走るのが好きな人",
-    made: "自分のためのシューズ診断サイト",
-    outcome: "「会ったこともない人から、ありがとうが届いた」",
+    made: "「どこに頼る？」に答える地域ガイド",
+    outcome: "「町じゅうの家族に使われ、『助かった』の声が届くようになった」",
   },
   {
     emoji: "📚",
-    who: "教える仕事の人",
-    made: "苦手をくり返せる学習ドリル",
-    outcome: "「『もう一回』が口ぐせになった子がいる」",
+    who: "元・教員",
+    made: "つまずきに寄り添う練習教材",
+    outcome: "「塾に通えない子の成績が、3か月で変わった」",
+  },
+  {
+    emoji: "🛠️",
+    who: "会社員・40代",
+    made: "自分の業界の面倒を解くツール",
+    outcome: "「同業者に広まり、いつのまにか事業になっていた」",
+  },
+  {
+    emoji: "📖",
+    who: "二児の親",
+    made: "親の人生を聞き取るメモリーブック",
+    outcome: "「親族に配ったら、みんな泣いた。残せてよかった」",
   },
 ];
 
@@ -46,7 +46,7 @@ export function Stories() {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-slate-400">
             すごい人の話ではありません。
-            あなたと同じように、目の前の「ちょっと困った」から始めた人たちです。
+            目の前の「これ、なんとかしたい」から始めて、気づけば大きく育てた人たちです。
           </p>
         </Reveal>
 
@@ -71,8 +71,8 @@ export function Stories() {
 
         <Reveal delay={0.1}>
           <p className="mt-10 text-center text-sm text-slate-400">
-            あなたの「ちょっと困った」も、
-            <span className="text-gradient font-bold">きっと、何かの入口</span>
+            あなたの「これ、なんとかしたい」も、
+            <span className="text-gradient font-bold">きっと、何かの始まり</span>
             になります。
           </p>
         </Reveal>

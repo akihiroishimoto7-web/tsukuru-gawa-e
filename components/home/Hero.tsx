@@ -44,12 +44,12 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg"
         >
-          少し前まで、何かを作るには
-          <span className="text-slate-100">専門知識やお金</span>がいった。
+          少し前まで、何かを変えるには
+          <span className="text-slate-100">資金も人脈も組織</span>が要った。
           <br className="hidden sm:block" />
-          今は、<span className="text-gradient font-bold">つくりたい気持ちとAI</span>があればいい。
+          今は、<span className="text-gradient font-bold">志とAI</span>があればいい。
           <br className="hidden sm:block" />
-          仕事のちょっとした不便も、趣味の「あったらいいな」も、自分の手で形にできる。
+          あなたの「これ、おかしい」が、世界の一部を作り変える出発点になる。
         </motion.p>
 
         {/* CTA */}

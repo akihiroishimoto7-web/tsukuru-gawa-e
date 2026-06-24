@@ -94,8 +94,8 @@ export function ResultView({
         )}
       </motion.div>
 
-      {/* ===== 3か月後 / 1年後 ===== */}
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
+      {/* ===== 3か月後 / 1年後 / 3年後（立志のスケール） ===== */}
+      <div className="mt-6 grid gap-4 md:grid-cols-3">
         <Reveal>
           <div className="glass-card h-full p-6">
             <p className="text-xs font-semibold uppercase tracking-widest text-ember">
@@ -109,10 +109,20 @@ export function ResultView({
         <Reveal delay={0.1}>
           <div className="glass-card h-full p-6">
             <p className="text-xs font-semibold uppercase tracking-widest text-ember">
-              1年後に実現できる未来
+              1年後に頼られはじめる
             </p>
             <p className="mt-3 text-sm leading-relaxed text-slate-200">
               {result.inOneYear}
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <div className="glass-card card-glow h-full p-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-gradient">
+              3年後に見えている景色
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-100">
+              {result.inThreeYears}
             </p>
           </div>
         </Reveal>
@@ -255,7 +265,7 @@ export function ResultView({
         <div className="mt-8 flex flex-col items-center gap-3">
           {recommendedCat && (
             <CTAButton href={`/zukan?cat=${recommendedCat.id}`}>
-              {recommendedCat.emoji} {recommendedCat.label}で作れるものを見る
+              {recommendedCat.emoji} 「{recommendedCat.label}」のテーマを見る
               <span aria-hidden>→</span>
             </CTAButton>
           )}
