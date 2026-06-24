@@ -51,10 +51,20 @@ export function ZukanCard({ item, index }: { item: ZukanItem; index: number }) {
           {item.name}
         </h3>
 
-        {/* 何を変えられるか：このカードの主役 */}
+        {/* 何を作り変えるか：このカードの主役 */}
         <p className="mt-2 text-sm leading-relaxed text-slate-300">
           {item.whatChanges}
         </p>
+
+        {/* ここから育つと：スケールを見せる */}
+        <div className="mt-3 border-l-2 border-ember/40 pl-3">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-ember/90">
+            ここから育つと
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-gradient">
+            {item.vision}
+          </p>
+        </div>
 
         <div className="mt-4 space-y-3 border-t border-white/5 pt-4 text-sm">
           <div className="flex items-center justify-between">
@@ -77,17 +87,17 @@ export function ZukanCard({ item, index }: { item: ZukanItem; index: number }) {
           </div>
         </div>
 
-        {/* 最初に作るMVP：行動を具体化する */}
+        {/* 今日できる最初の一歩：行動を具体化する */}
         <div className="mt-4 rounded-xl border border-ember/20 bg-ember/[0.06] p-3">
           <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
-            最初に作るMVP
+            今日できる、最初の一歩
           </p>
           <p className="mt-1 text-sm leading-relaxed text-slate-200">{item.mvp}</p>
         </div>
 
         {/* タップで詳細（つくり方）へ誘導するヒント */}
         <p className="mt-4 text-sm font-medium text-ember">
-          つくり方を見る{" "}
+          はじめ方を見る{" "}
           <span aria-hidden className="inline-block transition-transform group-hover:translate-x-0.5">
             →
           </span>

@@ -5,10 +5,17 @@ import { Reveal } from "@/components/ui/Reveal";
 import { zukanItems } from "@/lib/zukan-data";
 import { ZukanCard } from "@/components/zukan/ZukanCard";
 
-// トップで実際の「作れるもの」を数点そのまま見せ、図鑑へ最短でつなぐ。
+// トップで実際の「挑むに値するテーマ」を数点そのまま見せ、図鑑へ最短でつなぐ。
 // カテゴリの抽象でワンクッション置かず、具体的なカードを直接届ける。
-// 各カテゴリから1つずつ、はじめやすい(難易度低め)題材を選んでいる。
-const featuredIds = ["off-1", "edu-1", "hob-1", "med-2", "media-3", "ai-3"];
+// 6つの志の領域から1つずつ選んでいる。
+const featuredIds = [
+  "care-1",
+  "learn-1",
+  "local-2",
+  "legacy-2",
+  "venture-2",
+  "knowledge-1",
+];
 
 export function ZukanPreview() {
   const featured = featuredIds
@@ -20,14 +27,14 @@ export function ZukanPreview() {
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-ember">
-            作れるもの図鑑
+            挑むに値するテーマ
           </p>
           <h2 className="mt-3 text-center font-display text-2xl font-bold text-slate-100 sm:text-3xl">
-            たとえば、こんなものが作れる。
+            あなたは、何を作り変える人か。
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-slate-400">
-            どれも、特別な人の話ではありません。
-            現場を知る人、好きを持つ人が、AIと一緒に形にしてきたものです。
+            小さな一歩から始められて、数年後には“分野”を動かしうるテーマ。
+            便利な道具ではなく、世界の一部を作り変える問いです。
           </p>
         </Reveal>
 

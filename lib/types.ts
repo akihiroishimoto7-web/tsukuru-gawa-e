@@ -52,24 +52,25 @@ export interface ResultType {
   gradient: string;
 }
 
-// 図鑑のカテゴリ
+// 図鑑のカテゴリ ＝ 志の領域（何を作り変えるか）
 export type ZukanCategory =
-  | "medical"
-  | "office"
-  | "education"
-  | "hobby"
-  | "media"
-  | "ai";
+  | "care" // いのちと暮らしを支える（医療・介護・福祉）
+  | "learn" // 人が育つ場をつくる（教育・学び）
+  | "local" // 地域と暮らしを立て直す
+  | "legacy" // 消えゆくものを残す（文化・技術・記憶）
+  | "venture" // 一人から、産業をつくる
+  | "knowledge"; // 知の流れを変える（情報・メディア）
 
-// 図鑑の1カード
+// 図鑑の1カード ＝ 挑むに値するテーマ（志）
 export interface ZukanItem {
   id: string;
   category: ZukanCategory;
-  name: string; // 作れるもの名
-  whatChanges: string; // 何を変えられるか
-  difficulty: 1 | 2 | 3 | 4 | 5; // 難易度（★の数）
+  name: string; // 取り組みの名（具体的な“種”）
+  whatChanges: string; // 何を作り変えるか（その分野で起こす変化）
+  vision: string; // ここから育つと（数年後に到達しうる景色）
+  difficulty: 1 | 2 | 3 | 4 | 5; // 最初の一歩の難易度（★の数）
   skills: string[]; // 必要スキル
-  mvp: string; // 最初に作るMVP
+  mvp: string; // 今日できる、最初の一歩
   steps: string[]; // つくり方の最初の3ステップ（AIに伝える→小さく作る→自分用に直して公開）
   emoji: string;
 }

@@ -25,7 +25,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
     tools: ["Claude Code", "VSCode", "GitHub", "Vercel"],
     encouragement:
       "現場のことを一番わかっているのは、外の誰かではなく、そこにいるあなたです。あなたが作る小さなツールは、明日の誰かの定時退社になる。",
-    recommendedCategory: "office",
+    recommendedCategory: "local",
     gradient: "from-sky-400 via-indigo-500 to-violet-500",
   },
 
@@ -51,7 +51,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
     tools: ["Claude Code", "VSCode", "GitHub", "Vercel", "Supabase（記録を残すなら）"],
     encouragement:
       "あなたが昔ほしかった『わかりやすさ』を、今のあなたなら作れます。その教材は、まだ会っていない誰かの自信になる。",
-    recommendedCategory: "education",
+    recommendedCategory: "learn",
     gradient: "from-emerald-400 via-teal-500 to-cyan-500",
   },
 
@@ -77,7 +77,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
     tools: ["Claude Code", "VSCode", "GitHub", "Vercel"],
     encouragement:
       "完璧な発信者を待つ必要はありません。今日のあなたの『好き』を、今日の言葉で置けばいい。それを必要としている人が、必ずどこかにいます。",
-    recommendedCategory: "media",
+    recommendedCategory: "knowledge",
     gradient: "from-fuchsia-400 via-pink-500 to-rose-500",
   },
 
@@ -103,7 +103,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
     tools: ["Claude Code", "Codex", "VSCode", "GitHub", "Vercel", "Supabase", "Claude API"],
     encouragement:
       "大きく始める必要はありません。今夜、1機能だけ動かす。その小さな一歩が、あなたのプロダクトの確かな始まりになります。",
-    recommendedCategory: "ai",
+    recommendedCategory: "venture",
     gradient: "from-amber-400 via-orange-500 to-rose-500",
   },
 
@@ -129,7 +129,7 @@ export const resultTypes: Record<ResultTypeId, ResultType> = {
     tools: ["Claude Code", "VSCode", "GitHub", "Vercel"],
     encouragement:
       "経験がないことは、恥ずかしいことではありません。今日始める人が、半年後の『くわしい人』です。最初の一歩を、AIと一緒に踏み出しましょう。",
-    recommendedCategory: "hobby",
+    recommendedCategory: "legacy",
     gradient: "from-indigo-400 via-violet-500 to-purple-500",
   },
 };

@@ -102,6 +102,16 @@ export function ZukanDetailModal({
               {item.whatChanges}
             </p>
 
+            {/* ここから育つと：到達しうる景色 */}
+            <div className="mt-4 rounded-2xl border border-ember/20 bg-ember/[0.06] p-4">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
+                ここから育つと
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-gradient">
+                {item.vision}
+              </p>
+            </div>
+
             {/* つくり方の最初の3ステップ：このモーダルの主役 */}
             <div className="mt-6">
               <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
@@ -141,7 +151,7 @@ export function ZukanDetailModal({
                 </div>
               </div>
               <div>
-                <span className="text-xs text-slate-500">最初に作るMVP</span>
+                <span className="text-xs text-slate-500">今日できる、最初の一歩</span>
                 <p className="mt-1 leading-relaxed text-slate-200">{item.mvp}</p>
               </div>
             </div>
