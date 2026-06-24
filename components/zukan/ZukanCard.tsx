@@ -72,6 +72,13 @@ export function ZukanCard({ item, index }: { item: ZukanItem; index: number }) {
             <DifficultyStars level={item.difficulty} />
           </div>
 
+          <div className="flex items-center justify-between">
+            <span className="text-xs text-slate-500">運用コスト</span>
+            <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-300">
+              ほぼ ¥0
+            </span>
+          </div>
+
           <div>
             <span className="text-xs text-slate-500">必要スキル</span>
             <div className="mt-1.5 flex flex-wrap gap-1.5">

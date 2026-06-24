@@ -4,9 +4,9 @@ import { ZukanExplorer } from "@/components/zukan/ZukanExplorer";
 import { CTAButton } from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "作れるもの図鑑 | つくる側へ。",
+  title: "挑むに値するテーマ | つくる側へ。",
   description:
-    "医療・介護、事務、教育、趣味、発信、AIサービス。AIと一緒なら作れるものを、カテゴリ別に集めました。",
+    "いのちと暮らし、教育、地域、消えゆくものを残す、産業、知の流れ。一人から始まり、数年で“分野”を動かしうるテーマ。運用はほぼ¥0で。",
 };
 
 // 作れるもの図鑑ページ。
@@ -19,15 +19,15 @@ export default function ZukanPage() {
         {/* 見出し */}
         <header className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-ember">
-            作れるもの図鑑
+            挑むに値するテーマ
           </p>
           <h1 className="mt-3 font-display text-3xl font-black text-slate-50 sm:text-4xl">
-            これ、ぜんぶ「自分で」作れる。
+            あなたは、何を作り変えるか。
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-400">
-            大企業の話でも、天才の話でもありません。
-            現場を知る人、好きを持つ人が、AIと一緒に形にしてきたものたちです。
-            気になる1つを、あなたの最初の作品にしてみませんか。
+            小さな一歩から始められて、数年後には“分野”を動かしうるテーマ。
+            どれも運用はほぼ¥0で、誰でも負担なく続けられます。
+            ひとつ選んで、最初の一歩を踏み出してみませんか。
           </p>
         </header>
 
