@@ -6,6 +6,7 @@ import { Future } from "@/components/home/Future";
 import { Stories } from "@/components/home/Stories";
 import { ZukanPreview } from "@/components/home/ZukanPreview";
 import { Manifesto } from "@/components/home/Manifesto";
+import { Join } from "@/components/home/Join";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { HistoryVoice } from "@/components/home/HistoryVoice";
 
@@ -34,6 +35,7 @@ export default function HomePage() {
         note="松下村塾"
       />
       <Manifesto />
+      <Join />
       <FinalCTA />
     </>
   );
