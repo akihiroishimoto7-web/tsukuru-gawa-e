@@ -11,6 +11,8 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-[-20%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-[120px]" />
         <div className="absolute right-[-10%] top-[10%] h-[360px] w-[360px] rounded-full bg-ember/10 blur-[120px] animate-pulse-glow" />
+        {/* 坂の下からのぼる、夜明けの光。静かに「ここから始まる」気配（blurなしで軽量に） */}
+        <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-violet-600/10 via-ember/[0.06] to-transparent" />
       </div>
 
       <div className="mx-auto max-w-4xl text-center">
@@ -76,6 +78,15 @@ export function Hero() {
         >
           90秒・4つの質問・登録不要
         </motion.p>
+
+        {/* スクロールの誘い：物語のはじまりへ、そっと降りていく */}
+        <motion.span
+          aria-hidden
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 1.1 }}
+          className="mx-auto mt-14 block h-12 w-px bg-gradient-to-b from-slate-500/50 to-transparent animate-pulse-glow"
+        />
       </div>
     </section>
   );
