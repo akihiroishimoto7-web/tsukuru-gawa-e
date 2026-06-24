@@ -176,11 +176,11 @@ export default function StartPage() {
             </p>
             <div className="relative mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <CTAButton href="/diagnose">
-                志を診断する
+                まずは診断してみる
                 <span aria-hidden>→</span>
               </CTAButton>
               <CTAButton href="/zukan" variant="ghost">
-                挑むテーマを見る
+                つくれるものを見る
               </CTAButton>
             </div>
           </div>

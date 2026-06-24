@@ -19,15 +19,15 @@ export default function ZukanPage() {
         {/* 見出し */}
         <header className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-ember">
-            挑むに値するテーマ
+            つくれるもの
           </p>
           <h1 className="mt-3 font-display text-3xl font-black text-stone-900 sm:text-4xl">
-            あなたは、何を作り変えるか。
+            AIで、何を作ってみる？
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-stone-600">
-            小さな一歩から始められて、数年後には“分野”を動かしうるテーマ。
-            どれも運用はほぼ¥0で、誰でも負担なく続けられます。
-            ひとつ選んで、最初の一歩を踏み出してみませんか。
+            今日の小さな一歩から始められて、いつか大きく育つかもしれないテーマ。
+            どれも運用はほぼ¥0で、気軽に試せます。
+            気になるものを、ひとつ覗いてみてください。
           </p>
         </header>
 
@@ -48,7 +48,7 @@ export default function ZukanPage() {
             どれが自分に合うか、まだ迷う？
           </p>
           <CTAButton href="/diagnose">
-            志を診断する
+            まずは診断してみる
             <span aria-hidden>→</span>
           </CTAButton>
         </div>

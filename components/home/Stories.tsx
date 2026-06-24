@@ -8,26 +8,26 @@ const stories = [
   {
     emoji: "🩺",
     who: "介護の現場で働く人",
-    made: "「どこに頼る？」に答える地域ガイド",
-    outcome: "「町じゅうの家族に使われ、『助かった』の声が届くようになった」",
+    made: "家族向けの説明ページ",
+    outcome: "「作りかけを見せたら、『これ欲しい』と言われた。それが嬉しくて続いてる」",
   },
   {
     emoji: "📚",
     who: "元・教員",
-    made: "つまずきに寄り添う練習教材",
-    outcome: "「塾に通えない子の成績が、3か月で変わった」",
+    made: "つまずき用の練習問題",
+    outcome: "「AIと試作中。まだ粗いけど、子どもが『もう一回』と言ってくれた」",
   },
   {
     emoji: "🛠️",
     who: "会社員・40代",
-    made: "自分の業界の面倒を解くツール",
-    outcome: "「同業者に広まり、いつのまにか事業になっていた」",
+    made: "自分の仕事の小さな自動化",
+    outcome: "「面倒な作業を一つ、AIに任せてみた。たった一つでも、毎日が軽い」",
   },
   {
     emoji: "📖",
     who: "二児の親",
-    made: "親の人生を聞き取るメモリーブック",
-    outcome: "「親族に配ったら、みんな泣いた。残せてよかった」",
+    made: "親の話を聞き取るメモ",
+    outcome: "「完成はまだ先。でも、聞いて残しはじめられただけで一歩」",
   },
 ];
 
@@ -40,13 +40,13 @@ export function Stories() {
             つくった人たち
           </p>
           <h2 className="mt-3 text-center font-display text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">
-            たとえば、こんな人が、
+            たとえば、こんなふうに、
             <br className="sm:hidden" />
-            つくる側にいる。
+            試しはじめている。
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-stone-600">
-            すごい人の話ではありません。
-            目の前の「これ、なんとかしたい」から始めて、気づけば大きく育てた人たちです。
+            すごい人の話でも、完成した実績の話でもありません。
+            目の前の「これ、なんとかしたい」から、小さく手を動かしはじめた人たちです。
           </p>
         </Reveal>
 
@@ -71,9 +71,9 @@ export function Stories() {
 
         <Reveal delay={0.1}>
           <p className="mt-10 text-center text-sm text-stone-500">
-            あなたの「これ、なんとかしたい」も、
-            <span className="font-bold text-ember">きっと、何かの始まり</span>
-            になります。
+            完成していなくていい。
+            <span className="font-bold text-ember">作りかけを見せ合う</span>
+            ところから、はじめましょう。
           </p>
         </Reveal>
       </div>

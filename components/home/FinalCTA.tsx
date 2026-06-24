@@ -20,7 +20,7 @@ export function FinalCTA() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <CTAButton href="/diagnose">
-              志を診断する
+              まずは診断してみる
               <span aria-hidden>→</span>
             </CTAButton>
             <CTAButton href="/start" variant="ghost">

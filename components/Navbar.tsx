@@ -8,8 +8,8 @@ export function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/diagnose", label: "志の診断" },
-    { href: "/zukan", label: "挑むテーマ" },
+    { href: "/diagnose", label: "診断" },
+    { href: "/zukan", label: "つくれるもの" },
     { href: "/start", label: "はじめかた" },
   ];
 

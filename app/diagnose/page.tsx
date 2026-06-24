@@ -13,9 +13,9 @@ export function generateMetadata({
   const code =
     typeof searchParams.a === "string" ? searchParams.a : undefined;
 
-  let title = "志の診断 | 令和の松下村塾";
+  let title = "かんたん診断 | 令和の松下村塾";
   let description =
-    "4つの質問に答えるだけ。あなたが何を作り変える人か、3か月後・1年後・3年後にどこまで行けるかを診断します。";
+    "4つの質問に答えるだけ。あなたがAIで何をつくってみたい人か、最初の一歩から、いつか育つ未来までを診断します。";
   let ogUrl = "/og";
 
   if (code) {
@@ -54,14 +54,14 @@ export default function DiagnosePage() {
 
       <div className="px-5 pt-12 text-center sm:px-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-ember">
-          志の診断
+          かんたん診断
         </p>
         <h1 className="mt-3 font-display text-2xl font-black text-stone-900 sm:text-4xl">
-          あなたは、何を作り変える人か。
+          あなたは、何をつくってみたい人？
         </h1>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-stone-600">
           正解も、間違いもありません。
-          直感で選んでいくと、あなただけの未来が見えてきます。
+          直感で選んでいくと、あなたに向いていそうなことが見えてきます。
         </p>
       </div>
 

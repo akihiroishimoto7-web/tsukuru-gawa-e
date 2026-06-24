@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-stone-200 px-5 py-12 sm:px-8">
       <div className="mx-auto max-w-6xl">
         <p className="font-display text-lg font-bold text-stone-900">
-          令和の松下村塾
+          令和の松下村塾を目指す、小さな実験場
         </p>
         <p className="mt-2 max-w-md text-sm leading-relaxed text-stone-500">
           AIを学ぶ場所ではない。AIを使って、何かを始める場所。
@@ -15,8 +15,8 @@ export function Footer() {
 
         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone-500">
           <Link href="/" className="hover:text-stone-900">ホーム</Link>
-          <Link href="/diagnose" className="hover:text-stone-900">志の診断</Link>
-          <Link href="/zukan" className="hover:text-stone-900">挑むテーマ</Link>
+          <Link href="/diagnose" className="hover:text-stone-900">診断</Link>
+          <Link href="/zukan" className="hover:text-stone-900">つくれるもの</Link>
           <Link href="/start" className="hover:text-stone-900">はじめかた</Link>
         </div>
 

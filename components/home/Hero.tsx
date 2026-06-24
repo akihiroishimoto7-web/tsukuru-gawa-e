@@ -17,7 +17,7 @@ export function Hero() {
           className="mb-7 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-1.5 text-xs font-medium text-stone-600"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-ember" />
-          令和の松下村塾
+          令和の松下村塾を目指す、小さな実験場
         </motion.p>
 
         {/* メインコピー（強いファーストビュー） */}
@@ -41,9 +41,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-stone-600 sm:text-lg"
         >
-          会社も年齢も関係ない。面白いと思った人が集まり、学び、語り、つくる。
+          会社も年齢も関係ない。AIに興味がある人が少人数で集まって、
           <br className="hidden sm:block" />
-          ——人生を面白くするための、AI実験場。
+          話して、試して、作りかけを見せ合う。——まずは、最初の一歩から。
         </motion.p>
 
         {/* CTA */}
@@ -54,11 +54,11 @@ export function Hero() {
           className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           <CTAButton href="/diagnose">
-            志を診断する
+            まずは診断してみる
             <span aria-hidden>→</span>
           </CTAButton>
           <CTAButton href="/zukan" variant="ghost">
-            挑むテーマを見る
+            つくれるものを見る
           </CTAButton>
         </motion.div>
 

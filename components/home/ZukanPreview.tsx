@@ -26,14 +26,14 @@ export function ZukanPreview() {
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-ember">
-            挑むに値するテーマ
+            つくれるもの
           </p>
           <h2 className="mt-3 text-center font-display text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">
-            あなたは、何を作り変える人か。
+            AIで、何を作ってみる？
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-stone-600">
-            小さな一歩から始められて、数年後には“分野”を動かしうるテーマ。
-            便利な道具ではなく、世界の一部を作り変える問いです。
+            今日の小さな一歩から始められて、いつか大きく育つかもしれないテーマ。
+            気になるものを、ひとつ覗いてみてください。
           </p>
         </Reveal>
 
@@ -50,7 +50,7 @@ export function ZukanPreview() {
               href="/zukan"
               className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-700 transition-colors hover:border-stone-400 hover:bg-stone-50"
             >
-              挑むテーマをすべて見る（全{zukanItems.length}種）
+              つくれるものをすべて見る（全{zukanItems.length}種）
               <span aria-hidden>→</span>
             </Link>
           </div>
