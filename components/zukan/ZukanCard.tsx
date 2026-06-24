@@ -11,7 +11,7 @@ function DifficultyStars({ level }: { level: number }) {
   return (
     <span className="tracking-wider" aria-label={`難易度 ${level} / 5`}>
       <span className="text-ember">{"★".repeat(level)}</span>
-      <span className="text-slate-700">{"★".repeat(5 - level)}</span>
+      <span className="text-stone-300">{"★".repeat(5 - level)}</span>
     </span>
   );
 }
@@ -36,56 +36,56 @@ export function ZukanCard({ item, index }: { item: ZukanItem; index: number }) {
             setOpen(true);
           }
         }}
-        className="group flex h-full cursor-pointer flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus:outline-none focus-visible:ring-2 focus-visible:ring-ember/60 card-glow"
+        className="group flex h-full cursor-pointer flex-col rounded-2xl border border-stone-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-stone-300 hover:shadow-[0_16px_40px_-20px_rgba(28,25,23,0.18)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ember/50 card-glow"
       >
         <div className="flex items-start justify-between gap-3">
           <span className="text-3xl">{item.emoji}</span>
           {category && (
-            <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] text-slate-400">
+            <span className="rounded-full border border-stone-200 bg-[#faf9f7] px-2.5 py-1 text-[11px] text-stone-500">
               {category.label}
             </span>
           )}
         </div>
 
-        <h3 className="mt-4 font-display text-lg font-bold text-slate-100">
+        <h3 className="mt-4 font-display text-lg font-bold text-stone-900">
           {item.name}
         </h3>
 
         {/* 何を作り変えるか：このカードの主役 */}
-        <p className="mt-2 text-sm leading-relaxed text-slate-300">
+        <p className="mt-2 text-sm leading-relaxed text-stone-600">
           {item.whatChanges}
         </p>
 
         {/* ここから育つと：スケールを見せる */}
         <div className="mt-3 border-l-2 border-ember/40 pl-3">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-ember/90">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
             ここから育つと
           </p>
-          <p className="mt-1 text-sm leading-relaxed text-gradient">
+          <p className="mt-1 text-sm leading-relaxed text-stone-700">
             {item.vision}
           </p>
         </div>
 
-        <div className="mt-4 space-y-3 border-t border-white/5 pt-4 text-sm">
+        <div className="mt-4 space-y-3 border-t border-stone-200 pt-4 text-sm">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-500">難易度</span>
+            <span className="text-xs text-stone-500">難易度</span>
             <DifficultyStars level={item.difficulty} />
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-500">運用コスト</span>
-            <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-300">
+            <span className="text-xs text-stone-500">運用コスト</span>
+            <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-700">
               ほぼ ¥0
             </span>
           </div>
 
           <div>
-            <span className="text-xs text-slate-500">必要スキル</span>
+            <span className="text-xs text-stone-500">必要スキル</span>
             <div className="mt-1.5 flex flex-wrap gap-1.5">
               {item.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-md bg-white/[0.05] px-2 py-0.5 text-[11px] text-slate-300"
+                  className="rounded-md bg-stone-100 px-2 py-0.5 text-[11px] text-stone-600"
                 >
                   {skill}
                 </span>
@@ -95,11 +95,11 @@ export function ZukanCard({ item, index }: { item: ZukanItem; index: number }) {
         </div>
 
         {/* 今日できる最初の一歩：行動を具体化する */}
-        <div className="mt-4 rounded-xl border border-ember/20 bg-ember/[0.06] p-3">
+        <div className="mt-4 rounded-xl border border-ember/20 bg-ember/[0.05] p-3">
           <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
             今日できる、最初の一歩
           </p>
-          <p className="mt-1 text-sm leading-relaxed text-slate-200">{item.mvp}</p>
+          <p className="mt-1 text-sm leading-relaxed text-stone-700">{item.mvp}</p>
         </div>
 
         {/* タップで詳細（つくり方）へ誘導するヒント */}

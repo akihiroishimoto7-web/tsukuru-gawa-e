@@ -49,10 +49,10 @@ export async function GET(req: Request) {
     type = resultTypes[typeParam];
   }
 
-  const brand = "つくる側へ。";
-  const label = "AI 未来診断";
+  const brand = "令和の松下村塾";
+  const label = "志の診断";
   const heading = "あなたのタイプ";
-  const tagline = "あなたは、何を変えられる人？ ── つくる側へ。";
+  const tagline = "あなたは、何を作り変える人？ ── 令和の松下村塾";
 
   // 画像内に出る全文字を集めてフォントをサブセット取得
   const allText =

@@ -32,7 +32,7 @@ const config: Config = {
         "dawn-gradient":
           "linear-gradient(135deg, #6366f1 0%, #a855f7 45%, #ff8a5c 100%)",
         "aurora":
-          "radial-gradient(60% 60% at 50% 0%, rgba(99,102,241,0.22) 0%, rgba(168,85,247,0.10) 45%, rgba(5,6,15,0) 80%)",
+          "radial-gradient(60% 50% at 50% 0%, rgba(255,138,92,0.10) 0%, rgba(234,88,12,0.05) 45%, rgba(250,249,247,0) 80%)",
       },
       keyframes: {
         "fade-up": {

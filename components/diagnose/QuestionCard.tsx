@@ -15,11 +15,11 @@ export function QuestionCard({
 }) {
   return (
     <div className="mx-auto max-w-xl">
-      <h2 className="text-center font-display text-2xl font-bold leading-snug text-slate-50 sm:text-3xl">
+      <h2 className="text-center font-display text-2xl font-bold leading-snug text-stone-900 sm:text-3xl">
         {question.title}
       </h2>
       {question.caption && (
-        <p className="mt-3 text-center text-sm text-slate-400">
+        <p className="mt-3 text-center text-sm text-stone-500">
           {question.caption}
         </p>
       )}
@@ -38,21 +38,21 @@ export function QuestionCard({
               whileTap={{ scale: 0.98 }}
               className={`group flex items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all ${
                 active
-                  ? "border-ember/60 bg-ember/10"
-                  : "border-white/10 bg-white/[0.03] hover:border-white/30 hover:bg-white/[0.06]"
+                  ? "border-ember bg-ember/5"
+                  : "border-stone-200 bg-white hover:border-stone-300 hover:bg-stone-50"
               }`}
             >
               <span className="text-2xl">{choice.emoji}</span>
               <span
                 className={`flex-1 text-base font-medium ${
-                  active ? "text-white" : "text-slate-200"
+                  active ? "text-stone-900" : "text-stone-700"
                 }`}
               >
                 {choice.label}
               </span>
               <span
                 className={`text-lg transition-transform group-hover:translate-x-1 ${
-                  active ? "text-ember" : "text-slate-600"
+                  active ? "text-ember" : "text-stone-300"
                 }`}
                 aria-hidden
               >

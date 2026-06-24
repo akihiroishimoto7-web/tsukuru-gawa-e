@@ -17,14 +17,14 @@ export function HistoryVoice({
     <section className="px-5 py-16 sm:py-24">
       <Reveal>
         <figure className="mx-auto max-w-2xl text-center">
-          {/* 小さな夜明けの線 */}
-          <span className="mx-auto mb-7 block h-px w-10 bg-dawn-gradient opacity-60" />
-          <blockquote className="font-display text-xl font-bold leading-relaxed tracking-wide text-slate-200 sm:text-2xl">
+          {/* 小さなアクセントの線 */}
+          <span className="mx-auto mb-7 block h-px w-10 bg-ember/70" />
+          <blockquote className="font-display text-xl font-bold leading-relaxed tracking-wide text-stone-800 sm:text-2xl">
             {quote}
           </blockquote>
-          <figcaption className="mt-5 text-sm text-slate-500">
+          <figcaption className="mt-5 text-sm text-stone-500">
             — {source}
-            {note && <span className="ml-2 text-slate-600">{note}</span>}
+            {note && <span className="ml-2 text-stone-400">{note}</span>}
           </figcaption>
         </figure>
       </Reveal>

@@ -14,15 +14,15 @@ export function ProgressBar({
 
   return (
     <div className="mx-auto w-full max-w-xl">
-      <div className="mb-2 flex items-center justify-between text-xs text-slate-400">
+      <div className="mb-2 flex items-center justify-between text-xs text-stone-500">
         <span>
           質問 {current + 1} / {total}
         </span>
         <span>{percent}%</span>
       </div>
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-stone-200">
         <motion.div
-          className="h-full rounded-full bg-dawn-gradient"
+          className="h-full rounded-full bg-ember"
           initial={{ width: 0 }}
           animate={{ width: `${percent}%` }}
           transition={{ duration: 0.5, ease: "easeOut" }}

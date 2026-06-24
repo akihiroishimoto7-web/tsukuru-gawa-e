@@ -42,7 +42,7 @@ export function ResultView({
     }
   }, [answers]);
 
-  const shareText = `私は「${result.name}」でした。あなたは何を変えられる人？──つくる側へ。`;
+  const shareText = `私は「${result.name}」でした。あなたは何を作り変える人？──令和の松下村塾`;
   const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     shareText
   )}&url=${encodeURIComponent(shareUrl)}`;
@@ -65,13 +65,9 @@ export function ResultView({
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="relative overflow-hidden rounded-3xl border border-white/10 p-8 text-center sm:p-12"
+        className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 text-center shadow-[0_20px_60px_-30px_rgba(28,25,23,0.2)] sm:p-12"
       >
-        {/* タイプ固有のグラデーション光 */}
-        <div
-          className={`pointer-events-none absolute inset-x-0 top-[-30%] mx-auto h-[300px] w-[300px] rounded-full bg-gradient-to-br ${result.gradient} opacity-25 blur-[90px]`}
-        />
-        <p className="relative text-xs font-semibold uppercase tracking-widest text-slate-400">
+        <p className="relative text-xs font-semibold uppercase tracking-widest text-stone-500">
           あなたのタイプ
         </p>
         <h1
@@ -79,17 +75,17 @@ export function ResultView({
         >
           {result.name}
         </h1>
-        <p className="relative mx-auto mt-5 max-w-xl font-display text-lg font-bold text-slate-100 sm:text-xl">
+        <p className="relative mx-auto mt-5 max-w-xl font-display text-lg font-bold text-stone-900 sm:text-xl">
           「{result.catchphrase}」
         </p>
-        <p className="relative mx-auto mt-5 max-w-xl text-sm leading-relaxed text-slate-300">
+        <p className="relative mx-auto mt-5 max-w-xl text-sm leading-relaxed text-stone-600">
           {result.description}
         </p>
 
         {wantLabel && (
-          <p className="relative mt-6 inline-block rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs text-slate-300">
+          <p className="relative mt-6 inline-block rounded-full border border-stone-200 bg-[#faf9f7] px-4 py-1.5 text-xs text-stone-600">
             作ってみたいもの：
-            <span className="font-bold text-white">{wantLabel}</span>
+            <span className="font-bold text-stone-900">{wantLabel}</span>
           </p>
         )}
       </motion.div>
@@ -101,7 +97,7 @@ export function ResultView({
             <p className="text-xs font-semibold uppercase tracking-widest text-ember">
               3か月後に作れるもの
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-200">
+            <p className="mt-3 text-sm leading-relaxed text-stone-700">
               {result.inThreeMonths}
             </p>
           </div>
@@ -111,7 +107,7 @@ export function ResultView({
             <p className="text-xs font-semibold uppercase tracking-widest text-ember">
               1年後に頼られはじめる
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-200">
+            <p className="mt-3 text-sm leading-relaxed text-stone-700">
               {result.inOneYear}
             </p>
           </div>
@@ -121,7 +117,7 @@ export function ResultView({
             <p className="text-xs font-semibold uppercase tracking-widest text-gradient">
               3年後に見えている景色
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-100">
+            <p className="mt-3 text-sm leading-relaxed text-stone-900">
               {result.inThreeYears}
             </p>
           </div>
@@ -130,11 +126,11 @@ export function ResultView({
 
       {/* ===== 最初の7日間ロードマップ ===== */}
       <Reveal>
-        <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
-          <h2 className="font-display text-xl font-bold text-slate-100">
+        <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="font-display text-xl font-bold text-stone-900">
             最初の7日間ロードマップ
           </h2>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-stone-500">
             1週間後、あなたの作品はもうURLを持っています。
           </p>
 
@@ -150,21 +146,21 @@ export function ResultView({
               >
                 {/* タイムラインの軸 */}
                 <div className="flex flex-col items-center">
-                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full border border-white/15 bg-ink-800 text-[11px] font-bold text-slate-300">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full border border-stone-300 bg-white text-[11px] font-bold text-stone-600">
                     {i + 1}
                   </span>
                   {i < result.roadmap.length - 1 && (
-                    <span className="my-1 w-px flex-1 bg-gradient-to-b from-white/20 to-transparent" />
+                    <span className="my-1 w-px flex-1 bg-gradient-to-b from-stone-300 to-transparent" />
                   )}
                 </div>
                 <div className="pb-5">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
                     {day.day}
                   </p>
-                  <p className="font-display text-base font-bold text-slate-100">
+                  <p className="font-display text-base font-bold text-stone-900">
                     {day.title}
                   </p>
-                  <p className="mt-0.5 text-sm leading-relaxed text-slate-400">
+                  <p className="mt-0.5 text-sm leading-relaxed text-stone-600">
                     {day.detail}
                   </p>
                 </div>
@@ -176,11 +172,11 @@ export function ResultView({
 
       {/* ===== 必要ツール（公式サイトへのリンク） ===== */}
       <Reveal>
-        <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
-          <h2 className="font-display text-xl font-bold text-slate-100">
+        <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="font-display text-xl font-bold text-stone-900">
             あなたの道具箱
           </h2>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-stone-500">
             クリックで公式サイトへ。すべて無料、または少額で始められます。
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
@@ -193,11 +189,11 @@ export function ResultView({
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-medium text-slate-200 transition-colors hover:border-ember/50 hover:bg-ember/10 hover:text-white"
+                    className="group inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-[#faf9f7] px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:border-ember/50 hover:bg-ember/5 hover:text-stone-900"
                   >
                     {tool}
                     <span
-                      className="text-xs text-slate-500 transition-colors group-hover:text-ember"
+                      className="text-xs text-stone-400 transition-colors group-hover:text-ember"
                       aria-hidden
                     >
                       ↗
@@ -208,7 +204,7 @@ export function ResultView({
               return (
                 <span
                   key={tool}
-                  className="rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-medium text-slate-200"
+                  className="rounded-full border border-stone-200 bg-[#faf9f7] px-4 py-2 text-sm font-medium text-stone-700"
                 >
                   {tool}
                 </span>
@@ -220,24 +216,23 @@ export function ResultView({
 
       {/* ===== 励ましのメッセージ ===== */}
       <Reveal>
-        <div className="relative mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-8 text-center">
-          <div className="pointer-events-none absolute inset-x-0 bottom-[-50%] mx-auto h-[200px] w-[200px] rounded-full bg-ember/15 blur-[80px]" />
-          <p className="relative font-display text-lg font-bold leading-relaxed text-slate-100 sm:text-xl">
+        <div className="relative mt-6 overflow-hidden rounded-2xl border border-stone-200 bg-[#faf9f7] p-8 text-center">
+          <p className="relative font-display text-lg font-bold leading-relaxed text-stone-900 sm:text-xl">
             {result.encouragement}
           </p>
           {timeLine && (
-            <p className="relative mt-4 text-sm text-slate-400">{timeLine}</p>
+            <p className="relative mt-4 text-sm text-stone-500">{timeLine}</p>
           )}
         </div>
       </Reveal>
 
       {/* ===== 結果をシェア ===== */}
       <Reveal>
-        <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center sm:p-8">
-          <h2 className="font-display text-lg font-bold text-slate-100">
+        <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-6 text-center sm:p-8">
+          <h2 className="font-display text-lg font-bold text-stone-900">
             この結果を、誰かの一歩に。
           </h2>
-          <p className="mx-auto mt-1 max-w-md text-sm text-slate-400">
+          <p className="mx-auto mt-1 max-w-md text-sm text-stone-500">
             あなたのタイプをシェアすると、まだ迷っている誰かの背中を押せるかもしれません。
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
@@ -245,14 +240,14 @@ export function ResultView({
               href={xUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-ink-950 transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3 text-sm font-bold text-white transition-transform hover:scale-105"
             >
               𝕏 でシェアする
             </a>
             <button
               type="button"
               onClick={copyLink}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-medium text-slate-200 transition-colors hover:border-white/30 hover:bg-white/[0.06]"
+              className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-700 transition-colors hover:border-stone-400 hover:bg-stone-50"
             >
               {copied ? "✓ コピーしました" : "🔗 リンクをコピー"}
             </button>
@@ -273,21 +268,21 @@ export function ResultView({
             <button
               type="button"
               onClick={onRetake}
-              className="rounded-full border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-medium text-slate-300 transition-colors hover:border-white/30 hover:bg-white/[0.06]"
+              className="rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-600 transition-colors hover:border-stone-400 hover:bg-stone-50"
             >
               もう一度診断する
             </button>
             <Link
               href="/zukan"
-              className="rounded-full border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-medium text-slate-300 transition-colors hover:border-white/30 hover:bg-white/[0.06]"
+              className="rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-600 transition-colors hover:border-stone-400 hover:bg-stone-50"
             >
-              図鑑をすべて見る
+              挑むテーマを見る
             </Link>
           </div>
         </div>
       </Reveal>
 
-      <p className="mt-8 text-center text-xs leading-relaxed text-slate-500">
+      <p className="mt-8 text-center text-xs leading-relaxed text-stone-500">
         この診断結果は、あなたの可能性のほんの入り口です。
         <br />
         本当の答えは、最初の1行を書いたときに見つかります。

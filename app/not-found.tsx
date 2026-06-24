@@ -9,17 +9,17 @@ export default function NotFound() {
         <p className="font-display text-6xl font-black text-gradient sm:text-7xl">
           404
         </p>
-        <h1 className="mt-6 font-display text-2xl font-bold text-slate-100 sm:text-3xl">
+        <h1 className="mt-6 font-display text-2xl font-bold text-stone-900 sm:text-3xl">
           このページは、まだ誰も作っていません。
         </h1>
-        <p className="mt-4 text-sm leading-relaxed text-slate-400">
+        <p className="mt-4 text-sm leading-relaxed text-stone-500">
           でも、それはチャンスかもしれない。
           <br />
           つくる側のあなたなら、ここから始められます。
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <CTAButton href="/diagnose">
-            未来を診断する
+            志を診断する
             <span aria-hidden>→</span>
           </CTAButton>
           <CTAButton href="/" variant="ghost">

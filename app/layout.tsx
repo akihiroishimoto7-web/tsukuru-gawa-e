@@ -27,20 +27,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
-  title: "つくる側へ。| AIで、人生を少し変えるものを作る",
+  title: "令和の松下村塾 | AIを使って、何かを始める場所",
   description:
-    "昔は世界を変えるのに資金・人脈・組織が必要だった。今は、アイデアとAIがあればいい。あなたが『つくる側』になる未来を診断します。",
-  keywords: ["AI", "Claude Code", "個人開発", "非エンジニア", "ものづくり", "希望"],
+    "AIを学ぶ場所ではない。AIを使って、人生・仕事・挑戦を面白くする仲間が集まる場。走る。語る。学ぶ。つくる。会社も年齢も関係ない。小さく始めて、仲間と育てる。",
+  keywords: ["AI", "Claude Code", "松下村塾", "志", "個人開発", "地方", "仲間", "実験場"],
   openGraph: {
-    title: "つくる側へ。",
+    title: "令和の松下村塾",
     description:
-      "受け手から、つくる側へ。AIがあれば、普通の人でも自分の仕事・趣味・人生を変えるものを作れる。",
+      "AIを学ぶ場所ではない。AIを使って、何かを始める場所。面白いと思った人が集まり、学び、語り、つくる。",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05060f",
+  themeColor: "#faf9f7",
   width: "device-width",
   initialScale: 1,
 };

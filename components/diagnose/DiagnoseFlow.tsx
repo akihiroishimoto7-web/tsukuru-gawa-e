@@ -126,7 +126,7 @@ export function DiagnoseFlow() {
             <button
               type="button"
               onClick={handleBack}
-              className="text-sm text-slate-500 transition-colors hover:text-slate-300"
+              className="text-sm text-stone-500 transition-colors hover:text-stone-900"
             >
               ← 前の質問に戻る
             </button>

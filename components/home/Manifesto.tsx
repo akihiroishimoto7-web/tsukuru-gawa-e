@@ -21,16 +21,13 @@ const lines = [
 export function Manifesto() {
   return (
     <section className="relative section-pad">
-      {/* 中央に向かう淡いオーロラ */}
-      <div className="pointer-events-none absolute inset-x-0 top-1/2 -z-10 mx-auto h-[400px] max-w-3xl -translate-y-1/2 rounded-full bg-violet-600/10 blur-[120px]" />
-
-      <div className="mx-auto max-w-3xl space-y-16 text-center">
+      <div className="mx-auto max-w-3xl space-y-14 text-center">
         {lines.map((line, i) => (
           <Reveal key={i} delay={i * 0.05}>
-            <p className="font-display text-2xl font-bold leading-snug text-slate-100 sm:text-3xl">
+            <p className="font-display text-2xl font-black leading-snug tracking-tight text-stone-900 sm:text-3xl">
               {line.big}
             </p>
-            <p className="mt-3 text-base leading-relaxed text-slate-400 sm:text-lg">
+            <p className="mt-3 text-base leading-relaxed text-stone-500 sm:text-lg">
               {line.small}
             </p>
           </Reveal>

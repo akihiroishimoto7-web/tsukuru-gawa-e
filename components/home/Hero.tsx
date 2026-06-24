@@ -3,90 +3,73 @@
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
 
-// トップのヒーロー。あおらず、静かに「自分にもできるかも」と思ってもらう。
+// ファーストビュー。白地・余白多め。
+// 「ここは何をする場所か」が一瞬で伝わり、気軽に立ち寄った人の心に火が移る。
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-5 pb-20 pt-20 sm:px-8 sm:pt-28">
-      {/* 背景の光：夜明け前の空のように、上からほのかに差す */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-20%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-[120px]" />
-        <div className="absolute right-[-10%] top-[10%] h-[360px] w-[360px] rounded-full bg-ember/10 blur-[120px] animate-pulse-glow" />
-        {/* 坂の下からのぼる、夜明けの光。静かに「ここから始まる」気配（blurなしで軽量に） */}
-        <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-violet-600/10 via-ember/[0.06] to-transparent" />
-      </div>
-
-      <div className="mx-auto max-w-4xl text-center">
-        {/* 小さなタグライン */}
+    <section className="relative overflow-hidden px-5 pb-16 pt-20 sm:px-8 sm:pt-28">
+      <div className="mx-auto max-w-3xl text-center">
+        {/* 小さな看板 */}
         <motion.p
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-slate-300"
+          className="mb-7 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-1.5 text-xs font-medium text-stone-600"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-ember animate-pulse-glow" />
-          AIで、普通の人が「つくる側」になる
+          <span className="h-1.5 w-1.5 rounded-full bg-ember" />
+          令和の松下村塾
         </motion.p>
 
-        {/* メインコピー */}
+        {/* メインコピー（強いファーストビュー） */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-display text-4xl font-black leading-[1.15] tracking-tight text-slate-50 sm:text-6xl"
+          transition={{ duration: 0.7, delay: 0.05 }}
+          className="font-display text-3xl font-black leading-[1.25] tracking-tight text-stone-900 sm:text-5xl"
         >
-          見ているだけだった人が、
+          AIを学ぶ場所では、ない。
           <br />
-          <span className="text-shimmer">つくる側</span>へ。
+          AIを使って、
+          <span className="text-shimmer">何かを始める</span>
+          場所。
         </motion.h1>
 
         {/* サブコピー */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg"
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-stone-600 sm:text-lg"
         >
-          少し前まで、何かを変えるには
-          <span className="text-slate-100">資金も人脈も組織</span>が要った。
+          会社も年齢も関係ない。面白いと思った人が集まり、学び、語り、つくる。
           <br className="hidden sm:block" />
-          今は、<span className="text-gradient font-bold">志とAI</span>があればいい。
-          <br className="hidden sm:block" />
-          あなたの「これ、おかしい」が、世界の一部を作り変える出発点になる。
+          ——人生を面白くするための、AI実験場。
         </motion.p>
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          transition={{ duration: 0.7, delay: 0.35 }}
+          className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           <CTAButton href="/diagnose">
-            未来を診断する
+            志を診断する
             <span aria-hidden>→</span>
           </CTAButton>
           <CTAButton href="/zukan" variant="ghost">
-            作れるものを見る
+            挑むテーマを見る
           </CTAButton>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="mt-5 text-xs text-slate-500"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mt-5 text-xs text-stone-400"
         >
           90秒・4つの質問・登録不要
         </motion.p>
-
-        {/* スクロールの誘い：物語のはじまりへ、そっと降りていく */}
-        <motion.span
-          aria-hidden
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 1.1 }}
-          className="mx-auto mt-14 block h-12 w-px bg-gradient-to-b from-slate-500/50 to-transparent animate-pulse-glow"
-        />
       </div>
     </section>
   );

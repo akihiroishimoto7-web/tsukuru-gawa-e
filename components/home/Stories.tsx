@@ -39,12 +39,12 @@ export function Stories() {
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-ember">
             つくった人たち
           </p>
-          <h2 className="mt-3 text-center font-display text-2xl font-bold text-slate-100 sm:text-3xl">
+          <h2 className="mt-3 text-center font-display text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">
             たとえば、こんな人が、
             <br className="sm:hidden" />
             つくる側にいる。
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-slate-400">
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-relaxed text-stone-600">
             すごい人の話ではありません。
             目の前の「これ、なんとかしたい」から始めて、気づけば大きく育てた人たちです。
           </p>
@@ -53,14 +53,14 @@ export function Stories() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {stories.map((s, i) => (
             <Reveal key={s.who} delay={i * 0.08}>
-              <div className="glass-card card-glow flex h-full gap-4 p-6">
+              <div className="flex h-full gap-4 rounded-2xl border border-stone-200 bg-white p-6 card-glow">
                 <span className="text-3xl">{s.emoji}</span>
                 <div>
-                  <p className="text-xs font-medium text-slate-500">{s.who}</p>
-                  <p className="mt-1 font-display text-base font-bold text-slate-100">
+                  <p className="text-xs font-medium text-stone-500">{s.who}</p>
+                  <p className="mt-1 font-display text-base font-bold text-stone-900">
                     {s.made}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-ember/90">
+                  <p className="mt-3 text-sm leading-relaxed text-stone-600">
                     {s.outcome}
                   </p>
                 </div>
@@ -70,9 +70,9 @@ export function Stories() {
         </div>
 
         <Reveal delay={0.1}>
-          <p className="mt-10 text-center text-sm text-slate-400">
+          <p className="mt-10 text-center text-sm text-stone-500">
             あなたの「これ、なんとかしたい」も、
-            <span className="text-gradient font-bold">きっと、何かの始まり</span>
+            <span className="font-bold text-ember">きっと、何かの始まり</span>
             になります。
           </p>
         </Reveal>

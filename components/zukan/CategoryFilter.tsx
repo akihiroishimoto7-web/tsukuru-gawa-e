@@ -30,8 +30,8 @@ export function CategoryFilter({
               onClick={() => onChange(tab.id)}
               className={`flex-none rounded-full border px-4 py-2 text-sm font-medium transition-all ${
                 isActive
-                  ? "border-ember/50 bg-ember/15 text-white"
-                  : "border-white/10 bg-white/[0.02] text-slate-400 hover:border-white/25 hover:text-white"
+                  ? "border-stone-900 bg-stone-900 text-white"
+                  : "border-stone-300 bg-white text-stone-600 hover:border-stone-400 hover:text-stone-900"
               }`}
             >
               {tab.emoji && <span className="mr-1.5">{tab.emoji}</span>}

@@ -8,23 +8,23 @@ export function FinalCTA() {
   return (
     <section className="section-pad">
       <Reveal>
-        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.01] p-10 text-center sm:p-14">
-          {/* 中央から立ちのぼる光 */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-[-40%] mx-auto h-[300px] w-[300px] rounded-full bg-dawn-gradient opacity-20 blur-[100px]" />
-
-          <h2 className="relative font-display text-2xl font-black leading-snug text-slate-50 sm:text-4xl">
-            まずは、ひとつ。
+        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-stone-200 bg-white p-10 text-center shadow-[0_20px_60px_-30px_rgba(28,25,23,0.2)] sm:p-14">
+          <h2 className="font-display text-2xl font-black leading-snug tracking-tight text-stone-900 sm:text-4xl">
+            小さく始めて、
             <br />
-            <span className="text-shimmer">作ってみませんか。</span>
+            <span className="text-shimmer">仲間と育てる。</span>
           </h2>
-          <p className="relative mx-auto mt-5 max-w-md text-sm leading-relaxed text-slate-300 sm:text-base">
+          <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-stone-600 sm:text-base">
             まだ何を作るか決まっていなくても大丈夫。
-            4つの質問に答えるだけで、あなたに向いていそうなものが見えてきます。
+            4つの質問に答えるだけで、あなたに向いていそうなことが見えてきます。
           </p>
-          <div className="relative mt-8 flex justify-center">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <CTAButton href="/diagnose">
-              未来を診断する
+              志を診断する
               <span aria-hidden>→</span>
+            </CTAButton>
+            <CTAButton href="/start" variant="ghost">
+              はじめかたを見る
             </CTAButton>
           </div>
         </div>

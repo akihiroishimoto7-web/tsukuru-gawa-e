@@ -13,9 +13,9 @@ export function generateMetadata({
   const code =
     typeof searchParams.a === "string" ? searchParams.a : undefined;
 
-  let title = "未来診断 | つくる側へ。";
+  let title = "志の診断 | 令和の松下村塾";
   let description =
-    "4つの質問に答えるだけ。あなたが3か月後に作れるもの、1年後に実現できる未来、最初の7日間の進み方を診断します。";
+    "4つの質問に答えるだけ。あなたが何を作り変える人か、3か月後・1年後・3年後にどこまで行けるかを診断します。";
   let ogUrl = "/og";
 
   if (code) {
@@ -23,8 +23,8 @@ export function generateMetadata({
     const decoded = decodeAnswers(code);
     if (isComplete(decoded)) {
       const type = diagnose(decoded);
-      title = `私は「${type.name}」でした | つくる側へ。`;
-      description = `${type.catchphrase} あなたは何を変えられる人？`;
+      title = `私は「${type.name}」でした | 令和の松下村塾`;
+      description = `${type.catchphrase} あなたは何を作り変える人？`;
     }
   }
 
@@ -54,12 +54,12 @@ export default function DiagnosePage() {
 
       <div className="px-5 pt-12 text-center sm:px-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-ember">
-          未来診断
+          志の診断
         </p>
-        <h1 className="mt-3 font-display text-2xl font-black text-slate-50 sm:text-4xl">
-          あなたは、何を変えられる人か。
+        <h1 className="mt-3 font-display text-2xl font-black text-stone-900 sm:text-4xl">
+          あなたは、何を作り変える人か。
         </h1>
-        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
+        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-stone-600">
           正解も、間違いもありません。
           直感で選んでいくと、あなただけの未来が見えてきます。
         </p>
@@ -67,7 +67,7 @@ export default function DiagnosePage() {
 
       <Suspense
         fallback={
-          <p className="py-20 text-center text-sm text-slate-500">
+          <p className="py-20 text-center text-sm text-stone-500">
             診断を準備しています…
           </p>
         }

@@ -11,7 +11,7 @@ function DifficultyStars({ level }: { level: number }) {
   return (
     <span className="tracking-wider" aria-label={`難易度 ${level} / 5`}>
       <span className="text-ember">{"★".repeat(level)}</span>
-      <span className="text-slate-700">{"★".repeat(5 - level)}</span>
+      <span className="text-stone-300">{"★".repeat(5 - level)}</span>
     </span>
   );
 }
@@ -56,7 +56,7 @@ export function ZukanDetailModal({
         >
           {/* 背景：クリックで閉じる */}
           <div
-            className="absolute inset-0 bg-ink-950/85"
+            className="absolute inset-0 bg-stone-900/40"
             onClick={onClose}
             aria-hidden
           />
@@ -70,17 +70,14 @@ export function ZukanDetailModal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="relative max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-white/10 bg-ink-900/95 p-6 shadow-2xl sm:rounded-3xl sm:p-8"
+            className="relative max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-t-3xl border border-stone-200 bg-white p-6 shadow-2xl sm:rounded-3xl sm:p-8"
           >
-            {/* 上部のほのかな光 */}
-            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-ember/15 blur-3xl" />
-
             {/* 閉じるボタン */}
             <button
               type="button"
               onClick={onClose}
               aria-label="閉じる"
-              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-400 transition-colors hover:bg-white/[0.1] hover:text-white"
+              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-500 transition-colors hover:bg-stone-100 hover:text-stone-900"
             >
               ✕
             </button>
@@ -92,22 +89,22 @@ export function ZukanDetailModal({
                 {category && (
                   <span className="text-xs text-ember">{category.label}</span>
                 )}
-                <h2 className="mt-0.5 font-display text-xl font-bold text-slate-50">
+                <h2 className="mt-0.5 font-display text-xl font-bold text-stone-900">
                   {item.name}
                 </h2>
               </div>
             </div>
 
-            <p className="mt-4 text-sm leading-relaxed text-slate-300">
+            <p className="mt-4 text-sm leading-relaxed text-stone-600">
               {item.whatChanges}
             </p>
 
             {/* ここから育つと：到達しうる景色 */}
-            <div className="mt-4 rounded-2xl border border-ember/20 bg-ember/[0.06] p-4">
+            <div className="mt-4 rounded-2xl border border-ember/20 bg-ember/[0.05] p-4">
               <p className="text-[11px] font-semibold uppercase tracking-wider text-ember">
                 ここから育つと
               </p>
-              <p className="mt-1 text-sm leading-relaxed text-gradient">
+              <p className="mt-1 text-sm leading-relaxed text-stone-700">
                 {item.vision}
               </p>
             </div>
@@ -120,10 +117,10 @@ export function ZukanDetailModal({
               <ol className="mt-3 space-y-3">
                 {item.steps.map((step, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-dawn-gradient text-sm font-bold text-ink-950">
+                    <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-stone-900 text-sm font-bold text-white">
                       {i + 1}
                     </span>
-                    <span className="pt-0.5 text-sm leading-relaxed text-slate-200">
+                    <span className="pt-0.5 text-sm leading-relaxed text-stone-700">
                       {step}
                     </span>
                   </li>
@@ -131,25 +128,25 @@ export function ZukanDetailModal({
               </ol>
             </div>
 
-            {/* 補足情報：難易度・スキル・MVP */}
-            <div className="mt-6 space-y-3 rounded-2xl border border-white/5 bg-white/[0.02] p-4 text-sm">
+            {/* 補足情報：難易度・運用コスト・スキル・最初の一歩 */}
+            <div className="mt-6 space-y-3 rounded-2xl border border-stone-200 bg-[#faf9f7] p-4 text-sm">
               <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-500">難易度</span>
+                <span className="text-xs text-stone-500">難易度</span>
                 <DifficultyStars level={item.difficulty} />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-500">運用コスト</span>
-                <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-300">
+                <span className="text-xs text-stone-500">運用コスト</span>
+                <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-700">
                   ほぼ ¥0（無料の範囲で動く）
                 </span>
               </div>
               <div>
-                <span className="text-xs text-slate-500">必要スキル</span>
+                <span className="text-xs text-stone-500">必要スキル</span>
                 <div className="mt-1.5 flex flex-wrap gap-1.5">
                   {item.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-md bg-white/[0.05] px-2 py-0.5 text-[11px] text-slate-300"
+                      className="rounded-md bg-stone-100 px-2 py-0.5 text-[11px] text-stone-600"
                     >
                       {skill}
                     </span>
@@ -157,13 +154,13 @@ export function ZukanDetailModal({
                 </div>
               </div>
               <div>
-                <span className="text-xs text-slate-500">今日できる、最初の一歩</span>
-                <p className="mt-1 leading-relaxed text-slate-200">{item.mvp}</p>
+                <span className="text-xs text-stone-500">今日できる、最初の一歩</span>
+                <p className="mt-1 leading-relaxed text-stone-700">{item.mvp}</p>
               </div>
             </div>
 
             {/* そっとした後押し */}
-            <p className="mt-5 text-center text-xs leading-relaxed text-slate-500">
+            <p className="mt-5 text-center text-xs leading-relaxed text-stone-500">
               完璧じゃなくていい。まずは小さく、ひとつ作ってみる。
             </p>
             <div className="mt-3 flex justify-center">

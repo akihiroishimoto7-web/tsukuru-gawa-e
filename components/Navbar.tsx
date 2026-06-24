@@ -3,36 +3,36 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// 上部のナビゲーション。控えめだが、どこにいても診断へ戻れる。
+// 上部のナビゲーション。白地に、静かで知的な佇まい。
 export function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/diagnose", label: "未来診断" },
-    { href: "/zukan", label: "図鑑" },
+    { href: "/diagnose", label: "志の診断" },
+    { href: "/zukan", label: "挑むテーマ" },
     { href: "/start", label: "はじめかた" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-ink-950/70 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-stone-200/70 bg-[#faf9f7]/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <Link href="/" className="group flex items-center gap-2">
-          <span className="text-lg font-black tracking-tight text-slate-100 sm:text-xl">
-            つくる側へ<span className="text-gradient">。</span>
+          <span className="font-display text-base font-black tracking-tight text-stone-900 sm:text-lg">
+            令和の松下村塾
           </span>
         </Link>
 
-        <div className="flex items-center gap-1 sm:gap-3">
+        <div className="flex items-center gap-1 sm:gap-2">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:text-sm ${
+                className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors sm:text-sm ${
                   active
-                    ? "bg-white/10 text-white"
-                    : "text-slate-400 hover:text-white"
+                    ? "bg-stone-900 text-white"
+                    : "text-stone-500 hover:text-stone-900"
                 }`}
               >
                 {link.label}
