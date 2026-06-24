@@ -76,9 +76,9 @@ export async function GET(req: Request) {
           flexDirection: "column",
           width: "100%",
           height: "100%",
-          backgroundColor: "#070a18",
+          backgroundColor: "#faf9f7",
           backgroundImage:
-            "radial-gradient(60% 80% at 80% 0%, rgba(168,85,247,0.25), transparent 60%), radial-gradient(50% 60% at 0% 100%, rgba(255,138,92,0.18), transparent 60%)",
+            "radial-gradient(55% 70% at 85% 0%, rgba(255,138,92,0.12), transparent 60%)",
           padding: "72px 80px",
           justifyContent: "space-between",
           fontFamily: fontData ? "NotoSansJP" : "sans-serif",
@@ -86,24 +86,24 @@ export async function GET(req: Request) {
       >
         {/* 上段：ブランド + ラベル */}
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div style={{ fontSize: 36, color: "#e2e8f0", fontWeight: 700 }}>
+          <div style={{ fontSize: 36, color: "#1c1917", fontWeight: 700 }}>
             {brand}
           </div>
-          <div style={{ marginLeft: 24, fontSize: 26, color: "#ff8a5c" }}>
+          <div style={{ marginLeft: 24, fontSize: 26, color: "#ea580c" }}>
             {label}
           </div>
         </div>
 
         {/* 中段：あなたのタイプ + タイプ名 + アクセント線 + キャッチ */}
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 30, color: "#94a3b8", marginBottom: 18 }}>
+          <div style={{ fontSize: 30, color: "#78716c", marginBottom: 18 }}>
             {heading}
           </div>
           <div
             style={{
               fontSize: 88,
               fontWeight: 700,
-              color: "#f8fafc",
+              color: "#1c1917",
               lineHeight: 1.1,
             }}
           >
@@ -119,13 +119,13 @@ export async function GET(req: Request) {
               backgroundImage: `linear-gradient(90deg, ${c1}, ${c2})`,
             }}
           />
-          <div style={{ fontSize: 38, color: "#cbd5e1", marginTop: 34 }}>
+          <div style={{ fontSize: 38, color: "#44403c", marginTop: 34 }}>
             {`「${type.catchphrase}」`}
           </div>
         </div>
 
         {/* 下段：問いかけ */}
-        <div style={{ fontSize: 30, color: "#64748b" }}>{tagline}</div>
+        <div style={{ fontSize: 30, color: "#a8a29e" }}>{tagline}</div>
       </div>
     ),
     {

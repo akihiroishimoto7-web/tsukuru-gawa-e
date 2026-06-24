@@ -8,10 +8,10 @@ import { ZukanCard } from "@/components/zukan/ZukanCard";
 // トップで実際の「挑むに値するテーマ」を数点そのまま見せ、図鑑へ最短でつなぐ。
 // 6つの志の領域から1つずつ選んでいる。
 const featuredIds = [
+  "work-1",
   "care-1",
   "learn-1",
   "local-2",
-  "legacy-2",
   "venture-2",
   "knowledge-1",
 ];
