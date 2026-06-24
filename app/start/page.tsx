@@ -172,15 +172,15 @@ export default function StartPage() {
             </h2>
             <p className="relative mx-auto mt-4 max-w-md text-sm leading-relaxed text-stone-600">
               何を作るか決まっていなくても大丈夫。
-              まずは、自分に向いていそうなことを知ることから。
+              まずは、どんなものが作れるか覗いてみるところから。
             </p>
             <div className="relative mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <CTAButton href="/diagnose">
-                まずは診断してみる
+              <CTAButton href="/zukan">
+                何が作れるか、見てみる
                 <span aria-hidden>→</span>
               </CTAButton>
-              <CTAButton href="/zukan" variant="ghost">
-                つくれるものを見る
+              <CTAButton href="/" variant="ghost">
+                ホームへ戻る
               </CTAButton>
             </div>
           </div>

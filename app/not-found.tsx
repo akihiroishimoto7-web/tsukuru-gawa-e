@@ -18,8 +18,8 @@ export default function NotFound() {
           つくる側のあなたなら、ここから始められます。
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <CTAButton href="/diagnose">
-            志を診断する
+          <CTAButton href="/zukan">
+            何が作れるか、見てみる
             <span aria-hidden>→</span>
           </CTAButton>
           <CTAButton href="/" variant="ghost">

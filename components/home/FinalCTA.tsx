@@ -16,11 +16,11 @@ export function FinalCTA() {
           </h2>
           <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-stone-600 sm:text-base">
             まだ何を作るか決まっていなくても大丈夫。
-            4つの質問に答えるだけで、あなたに向いていそうなことが見えてきます。
+            まずは、どんなものが作れるか覗いてみてください。
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <CTAButton href="/diagnose">
-              まずは診断してみる
+            <CTAButton href="/zukan">
+              何が作れるか、見てみる
               <span aria-hidden>→</span>
             </CTAButton>
             <CTAButton href="/start" variant="ghost">

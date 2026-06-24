@@ -45,10 +45,10 @@ export default function ZukanPage() {
         {/* 末尾のCTA */}
         <div className="mt-16 text-center">
           <p className="mb-6 font-display text-xl font-bold text-stone-900">
-            どれが自分に合うか、まだ迷う？
+            気になるものは、見つかりましたか？
           </p>
-          <CTAButton href="/diagnose">
-            まずは診断してみる
+          <CTAButton href="/start">
+            はじめかたを見る
             <span aria-hidden>→</span>
           </CTAButton>
         </div>

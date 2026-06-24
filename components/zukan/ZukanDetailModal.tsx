@@ -165,11 +165,11 @@ export function ZukanDetailModal({
             </p>
             <div className="mt-3 flex justify-center">
               <Link
-                href="/diagnose"
+                href="/start"
                 onClick={onClose}
                 className="text-sm font-semibold text-ember transition-opacity hover:opacity-80"
               >
-                自分に向いてるものを診断する →
+                はじめかたを見る →
               </Link>
             </div>
           </motion.div>

@@ -11,14 +11,15 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { HistoryVoice } from "@/components/home/HistoryVoice";
 
 // トップページ。「令和の松下村塾」＝AIを使って何かを始める、仲間の集まる実験場。
-// 何の場所か(Hero/WhatIs) → 誰に(ForWhom) →〈声〉→ AIの威力(AiHints)
-// → 参加後の未来(Future) → 仲間の物語(Stories) → 挑むテーマ(ZukanPreview)
-// →〈声〉→ 精神(Manifesto) → 行動(FinalCTA)
+// 何の場所か(Hero/WhatIs) → 何が作れるか＝可能性(ZukanPreview) → 誰に(ForWhom)
+// →〈声〉→ AIの威力(AiHints) → 未来(Future) → 仲間の物語(Stories)
+// →〈声〉→ 精神(Manifesto) → 仲間になる(Join) → 行動(FinalCTA)
 export default function HomePage() {
   return (
     <>
       <Hero />
       <WhatIs />
+      <ZukanPreview />
       <ForWhom />
       <HistoryVoice
         quote="おもしろき こともなき世を おもしろく"
@@ -28,7 +29,6 @@ export default function HomePage() {
       <AiHints />
       <Future />
       <Stories />
-      <ZukanPreview />
       <HistoryVoice
         quote="志を立てて、もって万事の源と為す。"
         source="吉田松陰"

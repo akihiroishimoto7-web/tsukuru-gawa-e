@@ -53,12 +53,12 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.35 }}
           className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
-          <CTAButton href="/diagnose">
-            まずは診断してみる
+          <CTAButton href="/zukan">
+            何が作れるか、見てみる
             <span aria-hidden>→</span>
           </CTAButton>
-          <CTAButton href="/zukan" variant="ghost">
-            つくれるものを見る
+          <CTAButton href="/start" variant="ghost">
+            はじめかたを見る
           </CTAButton>
         </motion.div>
 
@@ -68,7 +68,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className="mt-5 text-xs text-stone-400"
         >
-          90秒・4つの質問・登録不要
+          全14種のつくれるもの・登録不要・運用ほぼ¥0
         </motion.p>
       </div>
     </section>

@@ -15,7 +15,6 @@ export function Footer() {
 
         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone-500">
           <Link href="/" className="hover:text-stone-900">ホーム</Link>
-          <Link href="/diagnose" className="hover:text-stone-900">診断</Link>
           <Link href="/zukan" className="hover:text-stone-900">つくれるもの</Link>
           <Link href="/start" className="hover:text-stone-900">はじめかた</Link>
         </div>
